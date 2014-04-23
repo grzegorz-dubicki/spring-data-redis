@@ -29,7 +29,7 @@ public interface ZSetOperations<K, V> {
 	/**
 	 * Typed ZSet tuple.
 	 */
-	public interface TypedTuple<V> extends Comparable<Double> {
+	public interface TypedTuple<V> extends Comparable<TypedTuple<V>> {
 		V getValue();
 
 		Double getScore();

@@ -87,4 +87,15 @@ public class DefaultTypedTuple<V> implements TypedTuple<V> {
 		Double a = (o == null ? Double.valueOf(0) : o);
 		return d.compareTo(a);
 	}
+
+	@Override
+	public int compareTo(TypedTuple<V> o) {
+
+		if (o == null) {
+			return compareTo(Double.valueOf(0));
+		}
+
+		return compareTo(o.getScore());
+	}
+
 }
