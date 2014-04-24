@@ -36,6 +36,7 @@ public class DefaultTypedTupleUnitTests {
 	 */
 	@Test
 	public void compareToShouldUseScore() {
+
 		assertThat(WITH_SCORE_1.compareTo(WITH_SCORE_2), equalTo(-1));
 		assertThat(WITH_SCORE_2.compareTo(WITH_SCORE_1), equalTo(1));
 		assertThat(WITH_SCORE_1.compareTo(ANOTHER_ONE_WITH_SCORE_1), equalTo(0));
@@ -46,6 +47,7 @@ public class DefaultTypedTupleUnitTests {
 	 */
 	@Test
 	public void compareToShouldConsiderGivenNullAsZeroScore() {
+
 		assertThat(WITH_SCORE_1.compareTo(null), equalTo(1));
 		assertThat(WITH_SCORE_NULL.compareTo(null), equalTo(0));
 	}
@@ -55,6 +57,7 @@ public class DefaultTypedTupleUnitTests {
 	 */
 	@Test
 	public void compareToShouldConsiderNullScoreAsZeroScore() {
+
 		assertThat(WITH_SCORE_1.compareTo(WITH_SCORE_NULL), equalTo(1));
 		assertThat(WITH_SCORE_NULL.compareTo(WITH_SCORE_1), equalTo(-1));
 	}
